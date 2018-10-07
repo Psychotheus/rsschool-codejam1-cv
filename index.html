@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Resume</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>My resume</h1>
+        </header>
+        
+        <section>
+            <h2>Name</h2>
+            <p>
+                <img width=100 height=100 src="logo.png">
+                <br>
+                Abramovich Boris Borisovich
+            </p>
+        </section>
+
+        <section>
+            <h2>Contacts</h2>
+            <ul>
+                <li>Email: psychotheus@gmail.com</li>
+                <li>Skype: psychotheus</li>
+                <li>Telegram: <a href="https://t.me/psychotheus/">https://t.me/psychotheus/</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Summary</h2>
+            <p>
+                My main goal is to learn as much as i can throughout RSSchool and subsequently work in IT.
+                I have a great desire to study and ready to spend from 3 to 6 hours per day for it(depends on my work).
+            </p>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <p>
+                Basic skills of JS, HTML & CSS, Git.
+            </p>
+        </section>
+
+        <section>
+            <h2>Code examples</h2>
+            <details>
+                <summary>
+                    Smart Calculator task
+                </summary>
+                <pre>
+    class SmartCalculator {
+    constructor(initialValue) {
+    
+        this.string = "" + initialValue;
+    }
+    
+    add(number) {
+        this.string += (" + " + number);
+        return this;
+    }
+    
+    subtract(number) {
+        this.string += (" - " + number);
+        return this;
+    }
+    
+    multiply(number) {
+        this.string += (" * " + number);
+        return this;
+    }
+    
+    devide(number) {
+        this.string += (" / " + number);
+        return this;
+    }
+    
+    pow(number) {
+        this.string += (" ** " + number);
+        return this;
+    }
+    
+    valueOf() {
+        return eval(this.string);
+    }
+    }
+                  
+                  module.exports = SmartCalculator;
+                </pre>
+            </details>
+            <details>
+                <summary>
+                        Money exchange task
+                </summary>
+                <pre>
+    module.exports = function makeExchange(currency) {
+        if (currency <= 0) return {};
+        if (currency > 10000) 
+            return {error: "You are rich, my friend! We don't have so much coins for exchange"};
+
+        let exchange = {"H": 0, "Q": 0, "D": 0, "N": 0, "P": 0};
+
+        exchange["H"] = Math.trunc(currency / 50);
+        currency %= 50;
+        exchange["Q"] = Math.trunc(currency / 25);
+        currency %= 25;
+        exchange["D"] = Math.trunc(currency / 10);
+        currency %= 10;
+        exchange["N"] = Math.trunc(currency / 5);
+        exchange["P"] = currency %= 5;
+        
+        for (key in exchange) {
+            if (exchange[key] == 0) delete exchange[key];
+        }
+
+        return exchange;
+    }
+                </pre>
+            </details>
+        </section>
+
+        <section>
+            <h2>An experience</h2>
+            <p>For now i have a little programming experience, but i plan to increase it.
+                All my tasks solving you can see on my <a href="https://github.com/Psychotheus">Github account</a>.
+            </p>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <p>
+                I've used the following resources to learn over the first stage of RSSchool:
+            </p>
+            <ul>
+                <li><a href="https://www.youtube.com/playlist?list=PLDyvV36pndZHkDRik6kKF6gSb0N0W995h">Git Basics</a></li>
+                <li><a href="https://www.codecademy.com/users/Psychotheus/achievements">HTML & CSS Basics</a></li>
+                <li><a href="https://learn.javascript.ru/">JS Basics</a></li>
+            </ul> 
+        </section>
+
+        <section>
+            <h2>English level</h2>
+            <p>I've studying english only in school.  After school didn't learned english
+            professioanlly, but raised the level of language watching movies and playing games.
+            I passed the test on <a href="http://training.by">training.by</a> and a result of it was A2+.
+            Here the result of a test on <a href="http://test.str.by">test.str.by</a>:
+            </p>
+            <details>
+                <summary>Image</summary>
+                <img width=100% src="engtest.png" alt="english test result">
+            </details>
+        </section>
+
+        <footer>
+            <p>
+                07.10.2018
+                Abramovich Boris
+            </p>
+        </footer>
+    </body>
+</html>
