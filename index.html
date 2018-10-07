@@ -43,6 +43,90 @@
             </p>
         </section>
 
+        <section>
+            <h2>Code examples</h2>
+            <details>
+                <summary>
+                    Smart Calculator task
+                </summary>
+                <pre>
+    class SmartCalculator {
+    constructor(initialValue) {
+    
+        this.string = "" + initialValue;
+    }
+    
+    add(number) {
+        this.string += (" + " + number);
+        return this;
+    }
+    
+    subtract(number) {
+        this.string += (" - " + number);
+        return this;
+    }
+    
+    multiply(number) {
+        this.string += (" * " + number);
+        return this;
+    }
+    
+    devide(number) {
+        this.string += (" / " + number);
+        return this;
+    }
+    
+    pow(number) {
+        this.string += (" ** " + number);
+        return this;
+    }
+    
+    valueOf() {
+        return eval(this.string);
+    }
+    }
+                  
+                  module.exports = SmartCalculator;
+                </pre>
+            </details>
+            <details>
+                <summary>
+                        Money exchange task
+                </summary>
+                <pre>
+    module.exports = function makeExchange(currency) {
+        if (currency <= 0) return {};
+        if (currency > 10000) 
+            return {error: "You are rich, my friend! We don't have so much coins for exchange"};
+
+        let exchange = {"H": 0, "Q": 0, "D": 0, "N": 0, "P": 0};
+
+        exchange["H"] = Math.trunc(currency / 50);
+        currency %= 50;
+        exchange["Q"] = Math.trunc(currency / 25);
+        currency %= 25;
+        exchange["D"] = Math.trunc(currency / 10);
+        currency %= 10;
+        exchange["N"] = Math.trunc(currency / 5);
+        exchange["P"] = currency %= 5;
+        
+        for (key in exchange) {
+            if (exchange[key] == 0) delete exchange[key];
+        }
+
+        return exchange;
+    }
+                </pre>
+            </details>
+        </section>
+
+        <section>
+            <h2>An experience</h2>
+            <p>For now i have a little programming experience, but i plan to increase it.
+                All my tasks solving you can see on my <a href="https://github.com/Psychotheus">Github account</a>.
+            </p>
+        </section>
+
         <footer>
             <p>
                 07.10.2018
